@@ -8,10 +8,23 @@
 
 / {
 	chosen {
-		u-boot,spl-boot-order = "same-as-spl", &sdhci, &sdmmc;
+		u-boot,spl-boot-order = "same-as-spl", &spi_flash, &sdhci, &sdmmc;
 	};
 };
 
 &vdd_log {
 	regulator-init-microvolt = <950000>;
+};
+
+
+&vdd_center {
+	regulator-min-microvolt = <950000>;
+	regulator-max-microvolt = <950000>;
+};
+
+&spi1 {
+
+	spi_flash: flash@0 {
+		u-boot,dm-pre-reloc;
+	};
 };
