@@ -106,6 +106,11 @@ config SPI_FLASH_ATMEL
 	help
 	  Add support for various Atmel SPI flash chips (AT45xxx and AT25xxx)
 
+config SPI_FLASH_ELNEC
+	bool "ELNEC SPI flash support"
+	help
+	  Add support for various ELNEC SPI flash chips (xt25fxxb)
+
 config SPI_FLASH_EON
 	bool "EON SPI flash support"
 	help
